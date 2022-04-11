@@ -31,15 +31,15 @@ Destroy all the windows and end the program.
 # Register Number:212221240026.
 # i) Convert BGR and RGB to HSV and GRAY.
 import cv2
-houseImage = cv2.imread('house.jpg')
-cv2.imshow('Original Image',houseImage)
-hsvImage = cv2.cvtColor(houseImage,cv2.COLOR_BGR2HSV)
+houseImage = cv2.imread('butterfly.jpg')
+cv2.imshow('Original Image',buterflyImage)
+hsvImage = cv2.cvtColor(butterflyImage,cv2.COLOR_BGR2HSV)
 cv2.imshow('BGR2HSV',hsvImage)
-hsvImage1=cv2.cvtColor(houseImage,cv2.COLOR_RGB2HSV)
+hsvImage1=cv2.cvtColor(butterflyImage,cv2.COLOR_RGB2HSV)
 cv2.imshow('RGB2HSV',hsvImage1)
-grayImage = cv2.cvtColor(houseImage,cv2.COLOR_BGR2GRAY)
+grayImage = cv2.cvtColor(butterflyImage,cv2.COLOR_BGR2GRAY)
 cv2.imshow('BGR2GRAY',grayImage)
-grayImage1 = cv2.cvtColor(houseImage,cv2.COLOR_RGB2GRAY)
+grayImage1 = cv2.cvtColor(butterflyImage,cv2.COLOR_RGB2GRAY)
 cv2.imshow('RGB2GRAY',grayImage1)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
@@ -50,11 +50,11 @@ cv2.destroyAllWindows()
 
 # ii)Convert HSV to RGB and BGR.
 import cv2
-houseHSVImage = cv2.imread('house.jpg')
-cv2.imshow('Original HSV Image',houseHSVImage)
-RGBImage = cv2.cvtColor(houseHSVImage,cv2.COLOR_HSV2RGB)
+houseHSVImage = cv2.imread('butterfly.jpg')
+cv2.imshow('Original HSV Image',butterflyHSVImage)
+RGBImage = cv2.cvtColor(butterflyHSVImage,cv2.COLOR_HSV2RGB)
 cv2.imshow('BGR2HSV',RGBImage)
-BGRImage=cv2.cvtColor(houseHSVImage,cv2.COLOR_HSV2BGR)
+BGRImage=cv2.cvtColor(butterflyHSVImage,cv2.COLOR_HSV2BGR)
 cv2.imshow('RGB2HSV',BGRImage)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
@@ -66,11 +66,11 @@ cv2.destroyAllWindows()
 
 # iii)Convert RGB and BGR to YCrCb.
 import cv2
-houseImage = cv2.imread('house.jpg')
-cv2.imshow('Original HSV Image',houseImage)
-YCrCb_image = cv2.cvtColor(houseImage, cv2.COLOR_RGB2YCrCb)
+houseImage = cv2.imread('butterfly.jpg')
+cv2.imshow('Original HSV Image',butterImage)
+YCrCb_image = cv2.cvtColor(butterflyImage, cv2.COLOR_RGB2YCrCb)
 cv2.imshow('BGR2HSV',YCrCb_image)
-YCrCb_image1 = cv2.cvtColor(houseImage, cv2.COLOR_BGR2YCrCb)
+YCrCb_image1 = cv2.cvtColor(butterflyImage, cv2.COLOR_BGR2YCrCb)
 cv2.imshow('RGB2HSV',YCrCb_image1)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
@@ -80,7 +80,7 @@ cv2.destroyAllWindows()
 
 # iv)Split and Merge RGB Image.
 import cv2
-image = cv2.imread('house.jpg')
+image = cv2.imread('butterfly.jpg')
 blue = image[:,:,0]
 green = image[:,:,1]
 red = image[:,:,2]
@@ -97,7 +97,7 @@ cv2.destroyAllWindows()
 
 # v) Split and merge HSV Image
 import cv2
-image = cv2.imread('house.jpg')
+image = cv2.imread('butterfly.jpg')
 hsv = cv2.cvtColor(image,cv2.COLOR_BGR2HSV)
 h,s,v = cv2.split(hsv)
 cv2.imshow('Hue - Image',h)
