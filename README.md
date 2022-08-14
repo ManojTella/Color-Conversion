@@ -31,7 +31,7 @@ Destroy all the windows and end the program.
 # Register Number:212221240026.
 # i) Convert BGR and RGB to HSV and GRAY.
 import cv2
-houseImage = cv2.imread('butterfly.jpg')
+butterflyImage = cv2.imread('butterfly.jpg')
 cv2.imshow('Original Image',buterflyImage)
 hsvImage = cv2.cvtColor(butterflyImage,cv2.COLOR_BGR2HSV)
 cv2.imshow('BGR2HSV',hsvImage)
